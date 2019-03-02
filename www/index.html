@@ -58,7 +58,7 @@
             </div>
         </div>
     <!-- Verifying connectivity.. -->
-        <a id="bkpLink" href="http://doitcloud-developer-edition.na34.force.com/ConsultantLoginsSignIn">ENTRAR</a>
+        <!-- <a id="bkpLink" href="http://doitcloud-developer-edition.na34.force.com/ConsultantLoginsSignIn">ENTRAR</a> -->
 
     <div class="app">
         <h1>Prueba 01</h1>
@@ -70,6 +70,12 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
+
+        var url2 = 'http://doitcloud-developer-edition.na34.force.com/ConsultantLoginsSignIn';
+        var target = '_blank';
+        var options = "location=no,hidden=yes,useWideViewPort=yes,toolbar=no";
+        var ref = cordova.InAppBrowser.open(url2,target,options);
+
         app.initialize();
     </script>
 </body>
