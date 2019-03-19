@@ -52,7 +52,7 @@ var app = {
     }*/
 
     onDeviceReady: function() {
-        cordova.InAppBrowser.open('http://capacitaciones-developer-edition.na81.force.com/Inicio/Encuesta?id=0063600000KcCRP', '_self', 'location=yes');
+        cordova.InAppBrowser.open('https://seguimientointerno-developer-edition.na85.force.com/InternalLogin/', '_self', 'location=yes');
         // cordova.InAppBrowser.open('https://doitcloud-developer-edition.na34.force.com/ConsultantLoginsSignIn', '_self', 'location=yes');
         window.open = cordova.InAppBrowser.open;
         app.receivedEvent('deviceready');
