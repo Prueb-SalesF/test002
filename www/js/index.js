@@ -52,7 +52,11 @@ var app = {
     }*/
 
     onDeviceReady: function() {
-        cordova.InAppBrowser.open('https://seguimientointerno-developer-edition.na85.force.com/InternalLogin/', '_self', 'location=no', 'hideurlbar=yes', 'toolbar=no');
+        // Register the event listener
+        document.addEventListener("backbutton", onBackKeyDown, false);
+        //URL
+        cordova.InAppBrowser.open('https://doit-lallemandinternodev001.cs77.force.com/', '_self', 'location=no', 'hideurlbar=yes', 'toolbar=no');
+        //cordova.InAppBrowser.open('https://seguimientointerno-developer-edition.na85.force.com/InternalLogin/', '_self', 'location=no', 'hideurlbar=yes', 'toolbar=no');
         // cordova.InAppBrowser.open('https://doitcloud-developer-edition.na34.force.com/ConsultantLoginsSignIn', '_self', 'location=yes');
         window.open = cordova.InAppBrowser.open;
         app.receivedEvent('deviceready');
