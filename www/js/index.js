@@ -72,7 +72,6 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
-    ,
     function didPressBackButton(event) {
 	    alert("go back!");
     }
