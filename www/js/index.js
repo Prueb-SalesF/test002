@@ -27,6 +27,8 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+	// Register the event listener
+        document.addEventListener('backbutton', onBackKey, false);
     },
     // deviceready Event Handler
     //
@@ -58,8 +60,7 @@ var app = {
         // cordova.InAppBrowser.open('https://doitcloud-developer-edition.na34.force.com/ConsultantLoginsSignIn', '_self', 'location=yes');
         window.open = cordova.InAppBrowser.open;
         app.receivedEvent('deviceready');
-	// Register the event listener
-        document.addEventListener("backbutton", didPressBackButton, false);
+	
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -72,7 +73,7 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
-    function didPressBackButton(event) {
+    function onBackKey(event) {
 	e.preventDefault();
 	alert('quit');
     }
