@@ -74,7 +74,7 @@ var app = {
         console.log('Received Event: ' + id);
     },
     function onBackKey(event) {
-	e.preventDefault();
-	alert('quit');
+	//e.preventDefault();
+	alert('¿Salir?');
     }
 };
