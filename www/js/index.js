@@ -53,7 +53,7 @@ var app = {
 
     onDeviceReady: function() {
         // Register the event listener
-        //document.addEventListener("backbutton", onBackKeyDown, false);
+        document.addEventListener("backbutton", didPressBackButton, false);
         //URL
         cordova.InAppBrowser.open('https://doit-lallemandinternodev001.cs77.force.com/', '_self', 'location=no', 'hideurlbar=yes', 'toolbar=no');
         //cordova.InAppBrowser.open('https://seguimientointerno-developer-edition.na85.force.com/InternalLogin/', '_self', 'location=no', 'hideurlbar=yes', 'toolbar=no');
@@ -71,5 +71,9 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+    ,
+    function didPressBackButton(event) {
+	    alert("go back!");
     }
 };
